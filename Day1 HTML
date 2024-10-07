@@ -1,0 +1,255 @@
+HTML - Hyper Text Markup Language: 
+
+Markup Language: HTML, XML
+
+HTML - Web Designing
+XML - Extensible Markup Language: Data Storage
+JSON: JavaScript Object Notation
+Interpreter: Browser: 
+
+Readable for both - Human and Machine. 
+
+<from> Ashok </from>
+<city> Chennai </city>
+
+sender ={from:"ashok", city:"chennai"}
+
+Markup Language: 
+<html>
+<head>
+<body>
+
+Tim Berners Lee: Father of Internet: 
+HTML: 1991
+
+HTML Working Group - 1995
+
+https://html.spec.whatwg.org/
+
+5.2 DHTML
+
+Not Case Sensitive:
+
+w3c  - www Consortium 
+
+Java - Class
+Python - Module
+HTML - Document
+<html> - Opening Tag
+</html> - Closing Tag
+
+<img src="abcd.jpeg" />
+
+
+// - Single Line Comment
+/*   */ - Multi line comment
+<!-- Comment in HTML -->
+
+Metadata: Java: @override - Annotation
+Data about data
+
+H -> Heading
+h1, h2, h3, h4, h5, h6
+
+<p>Hi</p> <p>Good Morning</p>
+
+<p>Hi Good Morning</p>
+<br><br><br>
+<p> How are you </p>
+
+Ordered List: 
+<ol>
+    <li>    Cognizant </li>
+    <li>Infosys </li>
+    <li>TCS </li>
+    <li>Accenture </li>
+
+</ol>
+
+Unordered List: 
+li - list item
+<ul>
+    <li>    Cognizant </li>
+    <li>Infosys </li>
+    <li>TCS </li>
+    <li>Accenture </li>
+
+</ul>
+
+pre - Preformatted Text: 
+space, font - will be as it is in our html document
+<ol>
+    <li><pre>    Cognizant </pre> </li>
+    <li>Infosys </li>
+    <li>TCS </li>
+    <li>Accenture </li>
+
+</ol>
+
+<ol>
+    <li>&nbsp;&nbsp;&nbsp;  Cognizant</li>
+    <li>Infosys </li>
+    <li>TCS </li>
+    <li>Accenture </li>
+
+</ol>
+
+nbsp - non-breaking space
+
+<ol>
+    <li> US Companies
+        <ol>
+            <li>Accenture </li>
+            <li>Cognizant </li>
+        </ol>
+
+    </li>
+    <li> Indian Companies
+        <ul>
+            <li>Infosys </li>
+            <li>TCS </li>
+        </ul>
+    </li>
+</ol>
+
+HTML Attributes: 
+
+color: black
+height = 6
+weight: 80
+Numbering Style of Ordered List: 
+
+<ol type="A">
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+</ol>
+<ol type="a">
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+</ol>
+<ol type="i">
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+</ol>
+
+Unordered List: Style: 
+
+<ul style="list-style-type:circle">
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+</ul>
+<ul style="list-style-type:disc">
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+</ul>
+<ol style="list-style-type:square">
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+</ol>
+<ol style="list-style-type:none">
+    <li> Item 1 </li>
+    <li> Item 2 </li>
+    <li> Item 3 </li>
+</ol>
+
+<b> Hi </b>
+<strong> Hello </strong>
+ strong - semantic tag
+<i> Hi </i> --> <em> Hi </em>
+<i> Hi </i> 
+ <em> Hi </em>
+
+<strong> <em> <u> Career Objective </u> </em> </strong>
+
+Can we change the order here?
+Yes, we can, but not recommended. 
+
+Description List: 
+
+<dl>
+    <dt> Project Title 1</dt> <!-- Description Term -->
+    <dd>    This project is about abcd.This project is about abcdThis project is about abcdThis project is about abcd   </dd> <!-- Description Data -->
+     <dt> Project Title 2</dt> <!-- Description Term -->
+    <dd>    This project is about abcd.This project is about abcdThis project is about abcdThis project is about abcd   </dd> <!-- Description Data -->
+     <dt> Project Title 3</dt> <!-- Description Term -->
+    <dd>    This project is about abcd.This project is about abcdThis project is about abcdThis project is about abcd   </dd> <!-- Description Data -->
+</dl>
+
+<p> Today is October 7<sup>th</sup> </p>
+<p> Water is H<sub>2</sub>O</p>
+
+a - Anchor tag
+href = hyper reference
+<a href="https://linkedin.com/raja"> Rajaraman</a>
+
+target="_blank" - opens in new tab
+<a href="https://linkedin.com/raja" target="_blank"> Rajaraman</a>
+
+Task: 
+Name - h1
+Email ID, git, linkedin - a href
+Technical Summary: ul, ol, 
+Project: dl
+underline, strong, emphasis
+<hr> - for adding line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
