@@ -1,0 +1,185 @@
+Link in Same Page:
+------------------
+<html>
+<head>
+
+</head>
+<body>
+<h1> Welcome to Our Home Page</h1>
+<p> <a href="#office"> Click Here to reach us </a>               </p>
+<p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p><p> This is our home page </p>
+<p> This is our home page </p><p> This is our home page </p>
+<p> This is our home page </p><p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p>
+<p> This is our home page </p><p> This is our home page </p>
+<p> This is our home page </p><p> This is our home page </p>
+<p> This is our home page </p><p> This is our home page </p>
+<p> This is our home page </p>
+
+<h2 id="office"> Contact Details </h2>
+<address>  Payilagam <br>
+Velachery <br>
+Chennai 42 <br>
+</address> 
+</body>
+</html>
+------------
+mailto: 
+
+<a href="https://linked.com"> Kumar </a>
+<a href="https://linked.com" target= "_blank"> Kumar </a>
+<a href="mailto:bajaji@gmail.com"> Reach Me </a>
+-------------
+Tables: 
+<table border=5>
+<tr> 
+    <th> S.No </th>
+    <th> Qualification </th>
+    <th> College / University </th>
+    <th> Percentage / CGPA </th>
+ </tr>
+<tr> 
+    <td> 1 </td>
+    <td> B.Sc., </td>
+    <td> Bharathiyar University </td>
+    <td> 72 </td>
+ </tr>
+<tr> 
+    <td> 2 </td>
+    <td> HSC </td>
+    <td> State Board </td>
+    <td> 68 </td>
+ </tr>
+
+</table>
+------------
+<p> Working for <mark>CTS </mark> Chennai </p>
+-------------
+
+Favicon: 
+-------
+<link rel="icon" type="image/x-icon" href="sample.ico">
+
+-------------
+Image: 
+<img src="java.jpeg" 
+    alt="Logo of Java"
+    width="400"
+    height="400"
+    title="Java Logo"
+>
+---------------
+<figure>
+<img src="java.jpeg" 
+    alt="Logo of Java"
+    width="400"
+    height="400"
+    title="Java Logo"
+/>
+<figcaption> Cup - Java Logo </figcaption>
+</figure>
+---------------
+iframe: 
+
+
+<iframe width="500" height="400" src="https://www.youtube.com/embed/crs18tcyq0o" title="இசைஞானியின் 1985 Hits (Volume 1) | Maestro Ilaiyaraaja | Evergreen Song in Tamil | 80s Songs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Task: 
+Prepare a Resume using HTML. 
+
+------------
+Registration Form: 
+
+<form method="post" >
+<label for="fName"> First Name </label>
+<input type="text" id="fn" name="f_name"> </br>
+<label for="lName"> Last Name </label>
+<input type="text" id="ln" name="l_name"> </br>
+<input type="submit" value="Login">
+</form>
+
+<form method="get" >
+<label for="fName"> First Name </label>
+<input type="text" id="fn" name="f_name"> </br>
+<label for="lName"> Last Name </label>
+<input type="text" id="ln" name="l_name"> </br>
+<input type="submit" value="Login">
+<input type="reset" value="Login">
+</form>
+
+---------
+reset: 
+<form method="get" >
+<label for="fName"> First Name </label>
+<input type="text" id="fn" name="f_name"> </br>
+<label for="lName"> Last Name </label>
+<input type="text" id="ln" name="l_name"> </br>
+<input type="submit" value="Login">
+<input type="reset" value="Clear">
+</form>
+------------
+<form method="get" >
+<label for="fName"> First Name </label>
+<input type="text" id="fn" name="f_name"> </br>
+<label for="lName"> Last Name </label>
+<input type="text" id="ln" name="l_name"> </br>
+<input type="image" src="ok.jpeg" width=50 height=50 alt="Login">
+<input type="reset" value="Clear">
+</form>
+---------------
+<form method="get" >
+<label for="mail_id"> EMail </label>
+<input type="email" id="em" name="email" autocomplete="off"> </br>
+<label for="password"> Password </label>
+<input type="password" id="pw" name="pass"> </br>
+<input type="image" src="ok.jpeg" width=50 height=50 alt="Login">
+<input type="reset" value="Clear">
+</form>
+-------------------
+<form method="get" >
+<label for="mail_id"> EMail </label>
+<input type="email" id="em" name="email" autocomplete="off" > </br>
+<label for="password"> Password </label>
+<input type="password" id="pw" name="pass" autofocus> </br>
+<input type="image" src="ok.jpeg" width=50 height=50 alt="Login">
+<input type="reset" value="Clear">
+</form>
+------------------
+<input type="number">
+
+<input type="text" id="mobile" maxlength="10">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
