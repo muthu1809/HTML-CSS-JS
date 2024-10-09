@@ -1,0 +1,122 @@
+Radio Buttons: 
+
+<input type="radio"> HTML 
+<input type ="radio"> CSS
+<input type="radio"> JS
+
+<input type="radio" id = "java" name='front_end'>
+<label for="java"> Java </label>
+<input type ="radio" id="python" name='front_end'> <label for="python"> Python </label>
+<input type="radio" id="dotnet" name='front_end'> 
+<label for="dotnet"> .NET </label>
+
+Drop Down / Select Box: 
+
+<select>
+    <option> Honda </option>
+    <option> Bajaj </option>
+    <option> Yamaha </option>
+    <option> hero </option>
+</select>
+
+<select id="Bikes" name="brands" size=3>
+    <option> Honda </option>
+    <option> Bajaj </option>
+    <option> Yamaha </option>
+    <option> hero </option>
+    <option> TVS </option>
+</select>
+
+<select id="Bikes" name="brands" size=3 multiple>
+    <option> Honda </option>
+    <option> Bajaj </option>
+    <option> Yamaha </option>
+    <option> hero </option>
+    <option> TVS </option>
+</select>
+
+<select id="Bikes" name="brands" multiple>
+    <option> Honda </option>
+    <option> Bajaj </option>
+    <option> Yamaha </option>
+    <option> hero </option>
+    <option> TVS </option>
+</select>
+
+<select id="Bikes" name="brands" size=3 multiple>
+    <option value="ho"> Honda </option>
+    <option value="ba"> Bajaj </option>
+    <option value="ya"> Yamaha </option>
+    <option value="he"> hero </option>
+    <option value="tvs"> TVS </option>
+</select>
+
+Buttons: 
+
+<input type="button" id = "data" value="Click Here">
+<button id="data"> Click Me   </button>
+
+Keyboard Shortcuts: 
+
+<button id="data" accesskey="y"> Click Me   </button>
+<input type="text" accesskey="r"> 
+
+alt + accesskey - Chrome, IE / Edge, Safari, Opera
+Firefox: alt + shift + accesskey
+
+<button id="data" accesskey="y"> Click Me   </button>
+<input type="text" accesskey="y"> 
+<button id="data" accesskey="y"> Click Me   </button>
+<input type="text" accesskey="y"> 
+
+Disabling Buttons: 
+<button id="data" accesskey="y" disabled> Click Me   </button>
+
+Datalist: for Recommended Options: 
+<label for="choice"> Enter your favorite brand </label>
+<input list="favorite_brand">
+
+<datalist id="favorite_brand">
+    <option value="Yamaha">
+    <option value="TVS">
+    <option value="Bajaj">
+    <option value="Hero">
+    <option value="Honda">
+</datalist>
+
+input type="range"
+------------------
+<input type="range" list="percentage">
+<datalist id="percentage">
+ <option value="5">
+    <option value="10">
+    <option value="20">
+    <option value="40">
+    <option value="60">
+    <option value="70">
+    <option value="80">
+    <option value="100">
+</datalist>
+
+Progress Bar: 
+
+<label for="lang"> Java </label>
+<progress max="100" value="70">  </progress><br>
+<label for="sql"> MySQL </label>
+<progress max="100" value="35"> </progress><br>
+
+Video: 
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  preload="auto"
+  poster="java.jpeg">
+  <source src="dog.mp4" type="video/mp4" />
+</video>
+
+-----------
+
