@@ -1,0 +1,195 @@
+CSS: Cascading Style Sheet: 
+Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+
+HTML, XML:
+<html>
+<body>
+<h1>
+<p>
+
+https://www.w3.org/Style/CSS/#specs
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS
+
+ruleset: 
+
+color:"red"
+background-color:"blue"
+font-size: 20px; 
+font-family: 'Arial'
+
+3 Ways to connect CSS with HTML: 
+1) Inline CSS - Not Advisable
+2) Internal CSS - Not recommended
+3) External CSS
+
+
+INLINE CSS: 
+<html>
+<head>
+</head>
+<body>
+<h1 style="color:white; background-color:lightgrey;font-size:30px;"> Its a rainy day </h1>
+</body>
+</html>
+
+INTERNAL CSS: 
+<html>
+<head>
+<style>
+h1
+{
+color:white; 
+background-color:lightgrey;
+font-size:30px;
+}
+</style>
+</head>
+<body>
+<h1> Its a rainy day </h1>
+
+<h1> Its a rainy day </h1>
+
+<h1> Its a rainy day </h1>
+
+<h1> Its a rainy day </h1>
+</body>
+</html>
+-----------------
+<html>
+<head>
+<style>
+h1, h2
+{
+color:white; 
+background-color:lightgrey;
+font-size:30px;
+}
+</style>
+</head>
+<body>
+<h1> Its a rainy day </h1>
+
+<h2> Its a rainy day </h2>
+
+<h1> Its a rainy day </h1>
+
+<h1> Its a rainy day </h1>
+</body>
+</html>
+----------
+
+style.css: 
+
+h1
+{
+color:yellow; 
+background-color: blue; 
+}
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> Its a rainy day </h1>
+<h2> Its a rainy day </h2>
+<h1> Its a rainy day </h1>
+<h1> Its a rainy day </h1>
+</body>
+</html>
+--------------
+font-family, font-weight, font-style
+
+p
+{
+color:yellow; 
+background-color: blue; 
+font-family: Helvetica, Arial, sans-serif;
+font-weight:bold; 
+font-style: italic;
+}
+
+--------
+p
+{
+color:yellow; 
+background-color: blue; 
+font-family: Helvetica, Arial, sans-serif;
+font-weight:bold; 
+font-style: italic;
+text-transform:capitalize; /*uppercase, lowercase*/
+}
+----------
+span
+{
+text-decoration:overline;/*underline,overline,line-through */
+}
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p> Pariyerum perumal <span>B.A.,B.L.,</span> </p>
+</body>
+</html>
+------------
+p
+{
+text-align:right; /*center, justify, left, right */
+}
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p> Pariyerum Perumal (transl. The Emperor who mounts a Horse) is a 2018 Indian Tamil-language drama film, written and directed by Mari Selvaraj in his directorial debut and produced by Pa. Ranjith. The film stars Kathir and Anandhi, while Yogi Babu and G. Marimuthu appear in supporting roles.
+
+</p>
+</body>
+</html>
+---------------
+h1 {
+  text-shadow:5px 5px 10px yellow
+}
+
+p {
+  line-height: 2.5;
+}
+
+-------------
+p {
+  letter-spacing: 4px;
+  word-spacing: 16px;
+}
+------------
+a
+{
+text-decoration:none; 
+color:black; 
+}
+
+----------
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> Balaji </h1>
+<a href="mailto:balaji@gmail.com"> balaji@gmail.com </a>
+</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+Font, Color, Size, Line Space, Background Color, Space, Multiple Columns, Animations
+
+
