@@ -1,0 +1,161 @@
+Multiple Elements with Same Property: 
+
+h1, a, h2, h3
+{
+font-family:Arial; 
+color: blue; 
+text-decoration:None; 
+}
+--------------
+All Elements with same property:
+Universal Selector: 
+
+*
+{
+font-family:Arial; 
+color: blue; 
+text-decoration:None; 
+}
+
+-------------
+ID Selectors: 
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 id="first"> Balaji </h1>
+<h1 id="second"> Balaji </h1>
+<h1 id="third"> Balaji </h1>
+<a href="mailto:balaji@gmail.com"> balaji@gmail.com </a>
+</p>
+</body>
+</html>
+
+style.css: 
+#first
+{
+font-family:Arial; 
+color: blue; 
+text-decoration:None; 
+}
+
+#second
+{
+font-family:Verdana; 
+color: red; 
+text-decoration:overline; 
+}
+
+#third
+{
+font-family:Verdana; 
+color: green; 
+text-decoration:underline; 
+}
+----------------------
+Class Selector: 
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 id="first" class="f"> Balaji </h1>
+<h1 id="second" class="f"> Balaji </h1>
+<h1 id="third" class="s"> Balaji </h1>
+<a href="mailto:balaji@gmail.com"> balaji@gmail.com </a>
+</p>
+</body>
+</html>
+
+style.css: 
+
+.f
+{
+font-family:Arial; 
+color: blue; 
+text-decoration:None; 
+}
+
+.s
+{
+font-family:Verdana; 
+color: red; 
+text-decoration:overline; 
+}
+
+----------------
+id: Unique, will be given priority over class. 
+class: not unique, can be applied for more than one element. 
+
+#f50af5
+------------
+Tag with Particular class name: 
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 id="first" class="f"> Balaji </h1>
+<h2 id="second" class="f"> Balaji </h2>
+<h2 id="third" class="s"> Balaji </h2>
+<a href="mailto:balaji@gmail.com"> balaji@gmail.com </a>
+</p>
+</body>
+</html>
+
+style.css: 
+h2.f
+{
+font-family:Verdana; 
+color: #f50af5; 
+text-decoration:overline; 
+}
+----------------
+Attribute / Property based selectors: 
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form>
+<label for="un"> Username: 
+<input type="text" name="username"> <br>
+<label for="pw"> Password: 
+<input type="text"name="pass"> <br>
+<input type="submit" value="Login">
+</form>
+</body>
+</html>
+
+input[value]
+{
+color: blue; 
+}
+--------------------
+input[name]
+{
+color: blue; 
+}
+----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
