@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<img src="ok.jpeg" title="ok_button"> <br>
+<img src="java.jpeg" title="java"> <br>
+</body>
+
+
+</html>
+
+[title~=ok_button]
+{
+border: 2px solid red ; 
+}
+
+[title=ok_button]
+{
+border: 2px solid red ; 
+}
+-----------
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="one">
+    <p> Hi How Are you </p>
+    <h1> I'm fine </h1>
+    <a href="www.google.com"> </a>
+</div>
+<div id="two">
+    <p> Hi Good Morning </p>
+    <h2> Good Evening </h2>
+    <a href="www.google.com"> </a>
+</div>
+</body>
+</html>
+
+style.css: 
+
+#one
+{
+background-color: red; 
+}
+#two
+{
+background-color: yellow; 
+}
+
+--------------
+Descendant Selectors:
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <p> Hi How Are you </p>
+    <h1> I'm fine </h1>
+    <a href="www.google.com"> </a>
+</div>
+<div>
+    <p> Hi Good Morning </p>
+    <h2> Good Evening </h2>
+    <a href="www.google.com"> </a>
+</div>
+</body>
+</html>
+--------------
+div h1
+{
+background-color: red; 
+}
+div h2
+{
+background-color: yellow; 
+}
+-----------------
+nth type of selectors: 
+-----------------------
+<!DOCTYPE html>
+<html>
+<head> 
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>  Hi 
+</div>
+<div> 
+<ul>
+    <li>  Java  </li>
+    <li>  Python </li>
+    <li>  Go    </li>
+     <li>  PHP    </li>
+</ul>
+</div>
+<div> Good Morning
+</div>
+<div> Good Evening
+</div>
+<div>  Hi 
+</div>
+<div> Hello 
+</div>
+<div> Good Morning
+</div>
+<div> Good Evening
+</div>
+
+</body>
+
+div:nth-of-type(even)
+{
+background-color: lightgreen; 
+}
+
+---------
+div:nth-of-type(even)
+{
+background-color: lightgreen; 
+}
+li:nth-of-type(odd)
+{
+background-color: grey; 
+}
+
+----------------
+Chess Board: 
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<table>
+    <tr>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+    </tr>
+    <tr>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+    </tr>
+    <tr>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+    </tr>
+    <tr>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+    </tr>
+    <tr>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+    </tr>
+    <tr>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+    </tr>
+    <tr>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+    </tr>
+    <tr>
+        <td>   </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+        <td>    </td>
+    </tr>
+</table>
+</body>
+</html>
+
+style.css: 
+table
+{
+border: 1px solid brown; 
+margin-top: 20px;
+margin-left: 60px;  
+}
+td
+{
+padding: 50px; 
+}
+
+tr:nth-of-type(even)
+td:nth-of-type(even),
+tr:nth-of-type(odd)
+td:nth-of-type(odd)
+{
+background-color: black; 
+}
+------------
+
+
+
+
+
+
