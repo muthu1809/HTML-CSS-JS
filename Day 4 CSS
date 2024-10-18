@@ -1,3 +1,29 @@
+Divisions: 
+
+<html>
+<head> 
+<html>
+<head> 
+<link rel="stylesheet" href="styles/style1.css"> 
+</head> 
+<body> <div>பத்தாவது முறை விழுந்தவனை முத்தமிட்டுச் சொன்னது பூமி - ஒன்பது முறை எழுந்தவன் அல்லவா நீ!  - ஈரோடு தமிழன்பன் </div>
+</body> 
+</html> 
+
+style1.css
+----------
+div {width:60%; height: 40%; border: 3px solid red; }
+
+இதே style.css கோப்பில் margin சேர்த்து வேறுபாட்டைக் கவனிக்கவும். 
+
+div {width:60%; height: 40%; border: 3px solid red; margin:25px; } 
+
+padding: உள்ளே இருக்கும் contentக்கும் இடைவெளி கொடுக்கும்.  
+style1.css
+
+div {width:60%; height: 40%; border: 3px solid red; margin:25px;padding: 25px; }
+
+
 RESUME: 
 
 <html lang="en">
