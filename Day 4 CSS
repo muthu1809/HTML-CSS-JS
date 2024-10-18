@@ -165,46 +165,82 @@ margin-right: 20px;
 
 RESUME - WEB: 
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="resume_web.css">
-<meta name="viewport" content="width=device-width" initial-scale="1">
-</head>
-<body>
-<nav class="navbar">
-<div class="name"> Kathir </div>
-<div class="menu">
-    <a href="#"> About Me </a>
-    <a href="#"> Projects </a>
-    <a href="#"> Experience </a>
-    <a href="#"> Contact Me </a>
-</div>
-</nav>
-</body>
-</html>
-
-.navbar
-{
-background-color: grey; 
-display: flex;
-justify-content: space-between; 
-}
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay's </title>
+    <style>
 .name
 {
-color:white; 
-font-size: 30px; 
-font-family: 'Arial';
+font-family: 'Arial', sans-serif;
+color:white;
 }
-a
+.navbar
 {
-text-decoration:None; 
-color: lightgrey; 
+display:flex; 
+justify-content:space-between;
+font-family: 'Arial', sans-serif;
+    background-color: #333;
+    padding: 20px;
+ 
+}
+a{
+text-decoration:None;
+color:white;
 }
 a:hover
 {
-color: orange; 
+color:orange;
 }
+
+.content-section
+{
+    margin-top: 20px; 
+font-family: 'Arial', sans-serif;
+    background-color: #999 ;
+    padding: 20px;
+border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="name">Ajay B.E.</div>
+        <div class="menu">
+            <a href="#" onclick="showContent('education')">Education</a>
+            <a href="#" onclick="showContent('projects')">Projects</a>
+            <a href="#" onclick="showContent('courses')">Courses</a>
+            <a href="#" onclick="showContent('contact')">Contact</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div id="education" class="content-section" style="display:none;">
+            <h2>Education</h2>
+            <p>This is the education section.</p>
+        </div>
+        <div id="projects" class="content-section" style="display:none;">
+            <h2>Projects</h2>
+            <p>This is the projects section.</p>
+        </div>
+        <div id="courses" class="content-section" style="display:none;">
+            <h2>Courses</h2>
+            <p>This is the courses section.</p>
+        </div>
+        <div id="contact" class="content-section" style="display:none;">
+            <h2>Contact</h2>
+            <p>This is the contact section.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
 
 
 
