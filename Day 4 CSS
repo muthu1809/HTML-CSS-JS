@@ -1,0 +1,187 @@
+RESUME: 
+
+<html lang="en">
+<head>
+<link rel="stylesheet" href="resume.css">
+<meta name="viewport" content="width=device-width" initial-scale="1">
+</head>
+<body>
+<h1> RESUME </H1>
+<div class="row">
+<div class="col-1"> Kathir </div>
+<div class="col-2"> Kathir </div>
+</div>
+<div class="row">
+<div class="col-1"> Mobile </div>
+<div class="col-2"> 12345 </div>
+</div>
+<div class="row">
+<div class="col-1"> Email </div>
+<div class="col-2"> kathir@gmail.com </div>
+</div>
+<div class="row">
+<div class="col-1"> git </div>
+<div class="col-2"> https://github.com/kathir </div>
+</div>
+<hr>
+<h2> Career Objective </h2>
+<div class="career-obj"> Description of Career Objective </div>
+<h2> Technical Summary </h2>
+<ul>
+   <li> Long Term Member in Tamil Linux Community </li>
+   <li> Long Term Member in Tamil Linux Community </li>
+   <li> Long Term Member in Tamil Linux Community </li>
+   <li> Long Term Member in Tamil Linux Community </li>
+   <li> Long Term Member in Tamil Linux Community </li>
+</ul>
+<h2> Educational Qualification: </h2>
+<table>
+<tr>
+    <th> S.No </th>
+    <th> Qualification </th>
+    <th> College /Board </th>
+    <th> Percentage/CGPA </th>
+    <th> Year of Passing </th>   
+</tr>
+<tr>
+    <td> S.No </td>
+    <td> Qualification </td>
+    <td> College /Board </td>
+    <td> Percentage/CGPA </td>
+    <td> Year of Passing </td>   
+</tr>
+<tr>
+    <td> S.No </td>
+    <td> Qualification </td>
+    <td> College /Board </td>
+    <td> Percentage/CGPA </td>
+    <td> Year of Passing </td>   
+</tr>
+<tr>
+    <td> S.No </td>
+    <td> Qualification </td>
+    <td> College /Board </td>
+    <td> Percentage/CGPA </td>
+    <td> Year of Passing </td>   
+</tr>
+</table>
+<h2> Skills </h2>
+<div class="row">
+<div class="col-1"> Language </div>
+<div class="col-2"> Java </div>
+</div>
+<div class="row">
+<div class="col-1"> DB </div>
+<div class="col-2"> Oracle </div>
+</div>
+<div class="row">
+<div class="col-1"> Framework </div>
+<div class="col-2"> Springboot </div>
+</div>
+<div class="row">
+<div class="col-1"> FrontEnd </div>
+<div class="col-2"> HTML, CSS </div>
+</div>
+<h2> Projects </h2>
+<ul>
+    <li> <a href="https://github.com"> Image Slider </a> </li>
+ <li> <a href="https://github.com"> Calculator </a> </li>
+</ul>
+<h2> Declaration </h2>
+<div class="declaration"> Here by I declare that all above information are true to my knowledge.
+</div>
+<br><br><br><br>
+<div class="signature"> Yours faithfully </div>
+</body>
+</html>
+
+--------------------------------
+resume.css: 
+
+h2
+{
+font: 15px Arial;
+color: white;
+background-color: grey; 
+position: sticky;
+top:0;
+left: 0; 
+}
+
+.col-1
+{
+float:left; 
+width: 30%; 
+}
+
+table
+{
+border: 2px solid grey; 
+border-collapse: collapse;
+margin-left: 10px; 
+}
+th
+{
+width: 8%; 
+}
+td
+{
+text-align: center; 
+background-color: #a1b1b1;
+}
+
+.signature
+{
+float:right; 
+margin-right: 20px; 
+}
+-----------------------------------
+
+RESUME - WEB: 
+
+<html>
+<head>
+<link rel="stylesheet" href="resume_web.css">
+<meta name="viewport" content="width=device-width" initial-scale="1">
+</head>
+<body>
+<nav class="navbar">
+<div class="name"> Kathir </div>
+<div class="menu">
+    <a href="#"> About Me </a>
+    <a href="#"> Projects </a>
+    <a href="#"> Experience </a>
+    <a href="#"> Contact Me </a>
+</div>
+</nav>
+</body>
+</html>
+
+.navbar
+{
+background-color: grey; 
+display: flex;
+justify-content: space-between; 
+}
+
+.name
+{
+color:white; 
+font-size: 30px; 
+font-family: 'Arial';
+}
+a
+{
+text-decoration:None; 
+color: lightgrey; 
+}
+a:hover
+{
+color: orange; 
+}
+
+
+
+
+
+
