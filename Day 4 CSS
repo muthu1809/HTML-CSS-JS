@@ -1,3 +1,44 @@
+POSITIONING: 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.static {
+  position: static;
+  border: 3px solid #a1b2c3;
+}
+</style>
+</head>
+<body>
+
+<h2>position: static;</h2>
+
+<p>The element is positioned according to the Normal Flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value.</p>
+
+<div class="static">
+This div element has position: static;
+</div>
+
+</body>
+</html>
+
+position: relative;
+The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left
+
+div.relative {
+  position: relative;
+  left: 30px;
+  border: 3px solid #a1b2c3;
+}
+
+position: fixed;
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+border: 3px solid #a1b2c3;}
+
 Divisions: 
 
 <html>
