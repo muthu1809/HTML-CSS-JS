@@ -33,6 +33,7 @@ RESUME:
 </head>
 <body>
 <h1> RESUME </H1>
+<img src="ok.jpeg">
 <div class="row">
 <div class="col-1"> Kathir </div>
 <div class="col-2"> Kathir </div>
@@ -160,6 +161,14 @@ background-color: #a1b1b1;
 {
 float:right; 
 margin-right: 20px; 
+}
+
+img {
+height: 50px;
+width: 50px;
+display: flex; 
+float: right; 
+
 }
 -----------------------------------
 
