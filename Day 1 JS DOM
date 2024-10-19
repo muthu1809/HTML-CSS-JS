@@ -1,0 +1,204 @@
+Javascript: ECMAScript: 
+European Computer Manufacturers Association:
+
+Interpreted Language: 
+
+JRE: JVM
+
+Browser: Interpreters: 
+
+Server Client: Browser: 
+Client Side Scripting Language: 
+
+Server Side JS: JS Engine: Node JS:
+
+Android: Play Store
+iOS: Store
+npm:
+
+Interfaces:
+Strictly typed language
+Dynamically typed language: 
+int no = 5; 
+
+no = 5; 
+
+no = 5
+
+Document Object Model (DOM) 
+
+Document  - HTML Document
+File    - Java Class
+Object - Element: States and Behaviours
+Model: Data
+
+<input type="text">
+
+login: username password
+
+What is the DOM?
+
+The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. 
+
+JS: Add Interaction with the web page. 
+
+DOM API: functions / methods: 
+
+<h1 id="name"> Viyan </h1>
+
+ctrl+shift+I -> Inspector
+
+<h1 id="name"> Viyan </h1>
+<script>
+alert(document.getElementById("name"))
+
+</script>
+Output: [object HTMLHeadingElement]
+
+In Browser: ctrl+shift+I: 
+document.getElementById("name")
+
+Change this to:
+alert(document.getElementById("name").innerHTML)
+document.getElementById("name").innerHTML
+
+document.getElementById("name").innerText 
+
+<div id="name"> Viyan </div>
+<script>
+alert(document.getElementById("name").innerHTML)
+
+</script>
+-------
+<input type="text" id="username"> <br>
+<input type="password" id="pwd">
+<button> Login </button>
+<script>
+alert(document.getElementById("username"))
+
+</script>
+
+Output:
+[object HTMLInputElement]
+
+
+document.getElementById("username").value
+
+document.getElementById("pwd").value
+
+DOM - Events: 
+All activities done through keyboard - Event. 
+
+click, keydown, keyup, contextclick
+
+<input type="text" id="username"> <br>
+<input type="password" id="pwd">
+<button onclick="check()"> Login </button>
+<script>
+function check()
+{
+alert(document.getElementById("username").value)
+console.log(document.getElementById("pwd").value)
+}
+
+</script>
+----------
+SSLC Mark Calculator: 
+
+<label for="s1"> Tamil </label>
+<input type="text" id="sub1"><br>
+<label for="s1"> English </label>
+<input type="text" id="sub2"><br>
+<label for="s1"> Maths </label>
+<input type="text" id="sub3"><br>
+<label for="s1"> Science </label>
+<input type="text" id="sub4"><br>
+<label for="s1"> Social </label>
+<input type="text" id="sub5"><br>
+<button onclick="calculate_total()"> Calculate </button>
+<script>
+function calculate_total()
+{
+let tamil = document.getElementById("sub1").value; 
+let english = document.getElementById("sub2").value; 
+let maths = document.getElementById("sub3").value; 
+let science = document.getElementById("sub4").value; 
+let social = document.getElementById("sub5").value; 
+total = tamil + english + maths + science + social; 
+alert(total)
+}
+</script>
+
+<script>
+function calculate_total()
+{
+let tamil = Number(document.getElementById("sub1").value); 
+let english = Number(document.getElementById("sub2").value); 
+let maths = Number(document.getElementById("sub3").value); 
+let science = Number(document.getElementById("sub4").value); 
+let social = Number(document.getElementById("sub5").value); 
+total = tamil + english + maths + science + social; 
+alert(total)
+}
+</script>
+
+Tasks Using JS DOM: 
+1) EB Bill Calculator
+2) EMI Calculator
+3) BMI Calculator
+<label for="s1"> Tamil </label>
+<input type="text"><br>
+<label for="s1"> English </label>
+<input type="text"><br>
+<label for="s1"> Maths </label>
+<input type="text"><br>
+<button onclick ="display()"> Calculate </button>
+<script>
+function display()
+{
+subjects = document.getElementsByTagName("input")
+alert(subjects[0].value)
+alert(subjects[1].value)
+alert(subjects[2].value)
+}
+</script>
+
+
+
+
+getElementsByTagName: 
+---------------------
+
+<label for="s1"> Tamil </label>
+<input type="text"><br>
+<label for="s1"> English </label>
+<input type="text"><br>
+<label for="s1"> Maths </label>
+<input type="text"><br>
+<button onclick ="display()"> Calculate </button>
+<script type="text/javascript" src="demo.js">
+</script>
+
+
+function display()
+{
+subjects = document.getElementsByTagName("input")
+alert(subjects[0].value)
+alert(subjects[1].value)
+alert(subjects[2].value)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
