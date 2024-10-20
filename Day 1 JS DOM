@@ -188,6 +188,11 @@ alert(subjects[1].value)
 alert(subjects[2].value)
 }
 
+TASK: 
+1) EMI Calculator
+2) BMI Calculator
+3) EB Bill Calculator
+
 
 
 
