@@ -1,0 +1,234 @@
+Last Class Update:
+
+<label for="s1"> Tamil </label>
+<input type="text"><br>
+<label for="s1"> English </label>
+<input type="text"><br>
+<label for="s1"> Maths </label>
+<input type="text"><br>
+<button onclick ="display()"> Calculate </button>
+<script type="text/javascript" src="demo.js">
+</script>
+
+
+demo.js: 
+------
+function display()
+{
+subjects = document.getElementsByTagName("input")
+alert(subjects[0].value)
+alert(subjects[1].value)
+alert(subjects[2].value)
+}
+
+
+மேல் உள்ளதைக் கையாளத் தான் for loop.  
+for(var i=0; i<subjects.length;i++)
+{
+alert(subjects[i].value); 
+}
+
+
+Select By Tag Name By ID:
+tag வைத்து எடுக்கும் போது எல்லா inputஉம் வர வாய்ப்பு உள்ளதே!  அதை எப்படிக் கையாள்வது?
+அதற்குத் தான் div id பயன்படுத்தப் போகிறோம்.  கீழ் உள்ளதைச் செயல்படுத்தி அதில் உள்ள சிக்கலைக் கவனியுங்கள்.  
+
+<!DOCTYPE html>
+<html>
+	<head> 
+		<script type="text/javascript" src="demo.js"> </script>
+<style>
+input{width:40%;height:50px;}
+h2, p
+{
+color:blue;
+}
+button
+{
+width:40%; 
+height:50px; 
+background-color: black; 
+color: yellow; 
+}
+</style>
+</head>	 
+<body>
+<h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
+<input placeHolder="Enter City Name"> இல் இருந்து<br>
+<div id = "cities">
+<input placeHolder="Enter City Name"> இல் இருந்து<br>
+<input placeHolder="Enter City Name"> வரை<br>
+<input placeHolder="Enter City Name"> இடைத்தங்கல்<br>
+
+<button onclick="getCityName()"> Submit </button>
+<p> </p>
+<p> </p>
+<p> </p>
+
+</div>
+	<script>
+		function getCityName()
+	{
+	cityNamesInput = document.getElementsByTagName("input")
+	cityNamesOutput = document.getElementsByTagName("p")
+	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
+	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
+	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
+	}
+	</script>
+</body>
+</html>
+
+இதைத் தவிர்க்கத் தான், div idஐ scriptக்குள் பயன்படுத்தப் போகிறோம்.  
+
+	<script>
+		function getCityName()
+	{
+       cityDivision = document.getElementById("cities")
+	cityNamesInput = cityDivision.getElementsByTagName("input")
+	cityNamesOutput = document.getElementsByTagName("p")
+	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
+	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
+	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
+	}	
+	</script>
+
+-------
+ஜாவாஸ்கிரிப்டைப் பயன்படுத்தி CSS கோப்பை எப்படிக் கையாள்வது? 
+
+index.html: 
+
+<!DOCTYPE html>
+<html>
+	<head> 
+		<script type="text/javascript" src="demo.js"> </script>
+    <link rel="stylesheet" href="styles/layout.css"> 
+</head>	 
+<body>
+<h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
+<input placeHolder="Enter City Name"> இல் இருந்து<br>
+
+<div id = "cities">
+<input placeHolder="Enter City Name"> இல் இருந்து<br>
+<input placeHolder="Enter City Name"> வரை<br>
+<input placeHolder="Enter City Name"> இடைத்தங்கல்<br>
+
+<button onclick="getCityName()"> Submit </button>
+<p> </p>
+<p> </p>
+<p> </p>
+
+</div>
+	<script>
+		function getCityName()
+	{
+	cityNamesInput = document.getElementsByTagName("input")
+	cityNamesOutput = document.getElementsByTagName("p")
+	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
+	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
+	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
+	}
+		
+	</script>
+</body>
+</html>
+
+
+layout.css:
+input{width:40%;height:50px;}
+h2, p
+{
+color:blue;
+}
+button
+{
+width:40%; 
+height:50px; 
+background-color: black; 
+color: yellow; 
+}
+
+demo.js: 
+--------
+function getCityName()
+{
+    cityDivision = document.getElementById("cities")
+	cityNamesInput = cityDivision.getElementsByTagName("input")
+	cityNamesOutput = document.getElementsByTagName("p")
+for(i=0;i<cityNamesInput.length;i++)
+    {
+	cityNamesOutput[i].innerHTML =cityNamesInput[i].value;
+    cityNamesOutput[i].style.color = "green";
+	}
+}
+
+தேவைப்பட்டால்: 
+cityNamesOutput[i].style.backgroundColor = "yellow";
+
+-----------------------
+DOM Events: 
+DOM Events இல் onclickஐ ஏற்கெனவே பார்த்திருக்கிறோம்.  
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2>
+<h2 onclick="this.innerHTML='See the Change!'">Click on this text!</h2>
+</body>
+</html>
+-----
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onclick Attribute</h2>
+    <h2 onclick="this.innerHTML='See the Change!!'; this.style.color='red'; this.style.fontFamily='Arial, sans-serif';">Click on this text!</h2>
+</body>
+</html>
+------
+
+<html>
+<head>
+</head>
+<body>
+<button id="myButton" onclick="display()"> Click Me </button>
+<script>
+function display()
+{
+alert("You clicked the Button");
+}
+</script>
+</body>
+</html>
+
+மேல் உள்ளதை எளிதாக: 
+<html>
+<head>
+</head>
+<body>
+<button id="myButton"> Click Me </button>
+<script>
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+</script>
+</body>
+</html>
+
+என்று எழுதலாம்.  
+---------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
