@@ -169,6 +169,22 @@ cityNamesOutput[i].style.backgroundColor = "yellow";
 DOM Events: 
 DOM Events இல் onclickஐ ஏற்கெனவே பார்த்திருக்கிறோம்.  
 
+Simple Calculator: 
+
+<html>
+<head>
+</head>
+<body>
+<form name="form1">
+<input type="button" value="1" onclick= "form1.results.value = form1.results.value+'1'">
+<input type="button" value="2" onclick= "form1.results.value = form1.results.value+'2'">
+<input type="button" value="+" onclick= "form1.results.value = form1.results.value+'+'">
+<input type="button" value="=" onclick= "form1.results.value = eval(form1.results.value)">
+<input type="text" name="results">
+</form>
+</body>
+</html>
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -219,16 +235,117 @@ document.getElementById("myButton").addEventListener("click", function() {
 என்று எழுதலாம்.  
 ---------------------------
 
+Key Down Event: 
+---------------
+<script>
 
+document.addEventListener("keydown", function(event) {
+    console.log("Key pressed: " + event.key);
+});
+</script>
 
+keydown event: எ.கா: 
 
+<html>
+<head>
+<style>
+.todo-item-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px; /* Add some space between items */
+        }
+</style>
+</head>
+<body>
+<div id="todo_list"> </div>
+<input type=text id="item" placeholder="Enter TODO List"> 
 
+<script>
+document.getElementById("item").addEventListener("keydown", 
+function(event)
+{
+if(event.key=="Enter")
+{
+const todo = document.getElementById("item").value;
+const para = document.createElement("p");
+para.textContent = todo; 
 
+//document.getElementById("todo_list").appendChild(para); 
+const button = document.createElement("span"); 
+button.textContent = 'X';
+button.style.color = "red";
+button.style.cursor = 'pointer';
 
+ button.addEventListener('click', function() {
+            this.parentElement.remove();
+        });
 
+const todo_item_container = document.createElement("div");
+//document.getElementById("todo_list").appendChild(button);
+ todo_item_container.className = "todo-item-container"; 
+todo_item_container.appendChild(para);
+todo_item_container.appendChild(button);
+document.getElementById("todo_list").appendChild(todo_item_container);
+document.getElementById("item").value ="";
 
+}
+}
 
+);
+</script>
+</body>
+</html>
 
+TODO LIST: 
 
+<html>
+<head>
+<style>
+.tdc
+{
+display:flex; 
+justify-content:space-between; 
+align-items:justify;
+}
+</style>
+</head>
+<body>
+<h1> TODO List </h1>
+<div id="todo-list"> </div>
+<input type="text" id="todo_item"> 
+<script>
+document.getElementById("todo_item").addEventListener("keydown", 
+function(event)
+{
+if(event.key=="Enter")
+    {
+     const todo_item =   document.getElementById("todo_item").value; 
+     const pa =   document.createElement("para"); 
+     pa.textContent = todo_item; //Washing
+if(todo_item!=""){
+    const delete_button = document.createElement("span");
+    delete_button.textContent = ' X ';
+    delete_button.style.color = "red";
+     delete_button.cursor = "Pointer";
 
+    delete_button.addEventListener("click",function()
+{
+        this.parentElement.remove(); 
+}
+);
 
+     const next_line = document.createElement("br");
+     const todo_container = document.createElement("div");
+    todo_container.className = "tdc";
+    todo_container.appendChild(pa); 
+    todo_container.appendChild(delete_button); 
+    todo_container.appendChild(next_line); 
+
+    document.getElementById("todo-list").appendChild(todo_container);
+    document.getElementById("todo_item").value = "";
+    }
+}
+}
+);
+</script>
+</html>
