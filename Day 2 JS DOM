@@ -1,5 +1,3 @@
-Last Class Update:
-
 <label for="s1"> Tamil </label>
 <input type="text"><br>
 <label for="s1"> English </label>
@@ -11,341 +9,190 @@ Last Class Update:
 </script>
 
 
-demo.js: 
-------
 function display()
 {
 subjects = document.getElementsByTagName("input")
-alert(subjects[0].value)
-alert(subjects[1].value)
-alert(subjects[2].value)
+for(var i=0; i<subjects.length;i++)
+alert(subjects[i].value);
 }
 
+----------
+document.getElementById
+document.getElementsByTagName
 
-மேல் உள்ளதைக் கையாளத் தான் for loop.  
+getElementsByTagName: div: 
+
+<div id="compulsory">
+<label for="s1"> Tamil </label>
+<input type="text"><br>
+<label for="s1"> English </label>
+<input type="text"><br>
+<label for="s1"> Maths </label>
+<input type="text"><br>
+</div>
+<label for="s1"> GK </label>
+<input type="text"><br>
+<button onclick ="display()"> Calculate </button>
+<script type="text/javascript" src="demo.js">
+</script>
+
+function display()
+{
+mandatory = document.getElementById("compulsory");
+subjects = mandatory.getElementsByTagName("input")
 for(var i=0; i<subjects.length;i++)
 {
-alert(subjects[i].value); 
+alert(subjects[i].value);
 }
-
-
-Select By Tag Name By ID:
-tag வைத்து எடுக்கும் போது எல்லா inputஉம் வர வாய்ப்பு உள்ளதே!  அதை எப்படிக் கையாள்வது?
-அதற்குத் தான் div id பயன்படுத்தப் போகிறோம்.  கீழ் உள்ளதைச் செயல்படுத்தி அதில் உள்ள சிக்கலைக் கவனியுங்கள்.  
-
-<!DOCTYPE html>
-<html>
-	<head> 
-		<script type="text/javascript" src="demo.js"> </script>
-<style>
-input{width:40%;height:50px;}
-h2, p
-{
-color:blue;
 }
-button
-{
-width:40%; 
-height:50px; 
-background-color: black; 
-color: yellow; 
-}
-</style>
-</head>	 
-<body>
-<h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
-<input placeHolder="Enter City Name"> இல் இருந்து<br>
-<div id = "cities">
-<input placeHolder="Enter City Name"> இல் இருந்து<br>
-<input placeHolder="Enter City Name"> வரை<br>
-<input placeHolder="Enter City Name"> இடைத்தங்கல்<br>
-
-<button onclick="getCityName()"> Submit </button>
-<p> </p>
-<p> </p>
-<p> </p>
-
-</div>
-	<script>
-		function getCityName()
-	{
-	cityNamesInput = document.getElementsByTagName("input")
-	cityNamesOutput = document.getElementsByTagName("p")
-	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
-	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
-	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
-	}
-	</script>
-</body>
-</html>
-
-இதைத் தவிர்க்கத் தான், div idஐ scriptக்குள் பயன்படுத்தப் போகிறோம்.  
-
-	<script>
-		function getCityName()
-	{
-       cityDivision = document.getElementById("cities")
-	cityNamesInput = cityDivision.getElementsByTagName("input")
-	cityNamesOutput = document.getElementsByTagName("p")
-	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
-	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
-	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
-	}	
-	</script>
-
--------
-ஜாவாஸ்கிரிப்டைப் பயன்படுத்தி CSS கோப்பை எப்படிக் கையாள்வது? 
-
-index.html: 
-
-<!DOCTYPE html>
-<html>
-	<head> 
-		<script type="text/javascript" src="demo.js"> </script>
-    <link rel="stylesheet" href="styles/layout.css"> 
-</head>	 
-<body>
-<h2> Select By Tag Name By ID எடுத்துக்காட்டு</h2>
-<input placeHolder="Enter City Name"> இல் இருந்து<br>
-
-<div id = "cities">
-<input placeHolder="Enter City Name"> இல் இருந்து<br>
-<input placeHolder="Enter City Name"> வரை<br>
-<input placeHolder="Enter City Name"> இடைத்தங்கல்<br>
-
-<button onclick="getCityName()"> Submit </button>
-<p> </p>
-<p> </p>
-<p> </p>
-
-</div>
-	<script>
-		function getCityName()
-	{
-	cityNamesInput = document.getElementsByTagName("input")
-	cityNamesOutput = document.getElementsByTagName("p")
-	cityNamesOutput[0].innerHTML =cityNamesInput[0].value
-	cityNamesOutput[1].innerHTML =cityNamesInput[1].value
-	cityNamesOutput[2].innerHTML =cityNamesInput[2].value
-	}
-		
-	</script>
-</body>
-</html>
-
-
-layout.css:
-input{width:40%;height:50px;}
-h2, p
-{
-color:blue;
-}
-button
-{
-width:40%; 
-height:50px; 
-background-color: black; 
-color: yellow; 
-}
-
-demo.js: 
---------
-function getCityName()
-{
-    cityDivision = document.getElementById("cities")
-	cityNamesInput = cityDivision.getElementsByTagName("input")
-	cityNamesOutput = document.getElementsByTagName("p")
-for(i=0;i<cityNamesInput.length;i++)
-    {
-	cityNamesOutput[i].innerHTML =cityNamesInput[i].value;
-    cityNamesOutput[i].style.color = "green";
-	}
-}
-
-தேவைப்பட்டால்: 
-cityNamesOutput[i].style.backgroundColor = "yellow";
-
------------------------
-DOM Events: 
-DOM Events இல் onclickஐ ஏற்கெனவே பார்த்திருக்கிறோம்.  
-
+-----------------
 Simple Calculator: 
 
 <html>
 <head>
+<link rel="stylesheet" href="#">
 </head>
 <body>
-<form name="form1">
-<input type="button" value="1" onclick= "form1.results.value = form1.results.value+'1'">
-<input type="button" value="2" onclick= "form1.results.value = form1.results.value+'2'">
-<input type="button" value="+" onclick= "form1.results.value = form1.results.value+'+'">
-<input type="button" value="=" onclick= "form1.results.value = eval(form1.results.value)">
+<form name = "calc" method="post">
+<input type="button" onclick = "calc.results.value = calc.results.value +'1'" value="1">
+<input type="button" onclick = "calc.results.value = calc.results.value +'2'"value="2">
+<input type="button" 
+onclick = "calc.results.value = calc.results.value +'+'"
+value="+">
+<input type="button" onclick = "calc.results.value = eval(calc.results.value)" value="=">
+<br>
 <input type="text" name="results">
 </form>
 </body>
 </html>
 
-<!DOCTYPE html>
-<html>
-<body>
-<h1>JavaScript HTML Events</h1>
-<h2>The onclick Attribute</h2>
-<h2 onclick="this.innerHTML='See the Change!'">Click on this text!</h2>
-</body>
-</html>
------
-<!DOCTYPE html>
-<html>
-<body>
-    <h1>JavaScript HTML Events</h1>
-    <h2>The onclick Attribute</h2>
-    <h2 onclick="this.innerHTML='See the Change!!'; this.style.color='red'; this.style.fontFamily='Arial, sans-serif';">Click on this text!</h2>
-</body>
-</html>
-------
+Task
+Simple Calculator: Remaining -, *, / 
+
+
+this - refers to current Object (Java)
+
+object --> HTML Element: 
 
 <html>
 <head>
 </head>
 <body>
-<button id="myButton" onclick="display()"> Click Me </button>
+<h1> On Click Event Sample </h1>
+<h2 onclick="this.innerHTML='See it is clicked'"> Click Here </h2>
+</body>
+</html>
+------------
+<html>
+<head>
+</head>
+<body>
+<h1> On Click Event Sample </h1>
+<h2 onclick="this.innerHTML='See it is clicked';
+this.style.color='orange'; 
+this.style.fontFamily='Arial,sans-serif';"> Click Here </h2>
+</body>
+</html>
+---------------
+<html>
+<head>
+</head>
+<body>
+<h1> On Click Event Sample </h1>
+<h2 id = "abcd" onclick="display()"> Click Here </h2>
 <script>
 function display()
 {
-alert("You clicked the Button");
+text = document.getElementById("abcd");
+text.innerHTML='See it is clicked';
 }
 </script>
 </body>
 </html>
+----------
+addEventListener:
 
-மேல் உள்ளதை எளிதாக: 
 <html>
 <head>
 </head>
 <body>
-<button id="myButton"> Click Me </button>
+<h1> On Click Event Sample </h1>
+<h2 id = "abcd"> Click Here </h2>
 <script>
-document.getElementById("myButton").addEventListener("click", function() {
-    alert("Button clicked!");
+document.getElementById("abcd").addEventListener("click",
+function()
+{
+text = document.getElementById("abcd");
+text.innerHTML='See it is clicked';
+});
+
+</script>
+</body>
+</html>
+-----------
+
+<html>
+<head>
+</head>
+<body>
+<h1 id="pqrs"> Mouse Over Event Sample </h1>
+<h2 id = "abcd"> Mouse Hover Here </h2>
+<script>
+document.getElementById("abcd").addEventListener("click",
+function()
+{
+text = document.getElementById("pqrs");
+text.innerHTML='See it is clicked';
+text.style.color="red";
+});
+
+</script>
+</body>
+</html>
+-----------
+change: 
+
+<html>
+<head>
+</head>
+<body>
+<select id="dropdown">
+    <option value="Honda"> Shine </option>
+     <option value="Bajaj"> Pulsor </option>
+     <option value="Yamaha"> Fz </option>
+</select>
+<script>
+document.getElementById("dropdown").addEventListener("change",
+function()
+{
+alert('You have selected: ' + this.value);
 });
 </script>
 </body>
 </html>
-
-என்று எழுதலாம்.  
----------------------------
-
-Key Down Event: 
----------------
-<script>
-
-document.addEventListener("keydown", function(event) {
-    console.log("Key pressed: " + event.key);
-});
-</script>
-
-keydown event: எ.கா: 
+--------------
 
 <html>
 <head>
-<style>
-.todo-item-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px; /* Add some space between items */
-        }
-</style>
 </head>
 <body>
-<div id="todo_list"> </div>
-<input type=text id="item" placeholder="Enter TODO List"> 
+<form id="myForm">
+<input type="text" id="name"> <br>
+<input type="radio" name ="gender" value ="M" id="male"> Male </input> 
+<input type="radio" name ="gender" value ="F" id="female"> Female </input> 
+<button type="submit"> Insert </button>
 
+</form>
 <script>
-document.getElementById("item").addEventListener("keydown", 
+document.getElementById("myForm").addEventListener('submit',
 function(event)
 {
-if(event.key=="Enter")
-{
-const todo = document.getElementById("item").value;
-const para = document.createElement("p");
-para.textContent = todo; 
+username =   document.getElementById("name").value;
+alert(username);
+gg = document.querySelector('input[name="gender"]:checked').value;
+alert(gg);
+})
 
-//document.getElementById("todo_list").appendChild(para); 
-const button = document.createElement("span"); 
-button.textContent = 'X';
-button.style.color = "red";
-button.style.cursor = 'pointer';
-
- button.addEventListener('click', function() {
-            this.parentElement.remove();
-        });
-
-const todo_item_container = document.createElement("div");
-//document.getElementById("todo_list").appendChild(button);
- todo_item_container.className = "todo-item-container"; 
-todo_item_container.appendChild(para);
-todo_item_container.appendChild(button);
-document.getElementById("todo_list").appendChild(todo_item_container);
-document.getElementById("item").value ="";
-
-}
-}
-
-);
 </script>
 </body>
-</html>
-
-TODO LIST: 
-
-<html>
-<head>
-<style>
-.tdc
-{
-display:flex; 
-justify-content:space-between; 
-align-items:justify;
-}
-</style>
-</head>
-<body>
-<h1> TODO List </h1>
-<div id="todo-list"> </div>
-<input type="text" id="todo_item"> 
-<script>
-document.getElementById("todo_item").addEventListener("keydown", 
-function(event)
-{
-if(event.key=="Enter")
-    {
-     const todo_item =   document.getElementById("todo_item").value; 
-     const pa =   document.createElement("para"); 
-     pa.textContent = todo_item; //Washing
-if(todo_item!=""){
-    const delete_button = document.createElement("span");
-    delete_button.textContent = ' X ';
-    delete_button.style.color = "red";
-     delete_button.cursor = "Pointer";
-
-    delete_button.addEventListener("click",function()
-{
-        this.parentElement.remove(); 
-}
-);
-
-     const next_line = document.createElement("br");
-     const todo_container = document.createElement("div");
-    todo_container.className = "tdc";
-    todo_container.appendChild(pa); 
-    todo_container.appendChild(delete_button); 
-    todo_container.appendChild(next_line); 
-
-    document.getElementById("todo-list").appendChild(todo_container);
-    document.getElementById("todo_item").value = "";
-    }
-}
-}
-);
-</script>
 </html>
