@@ -1,0 +1,241 @@
+<html>
+<head>
+</head>
+<body>
+<form id="myForm">
+  <input type="text" id="name"> <br>
+  <input type="radio" name="gender" value="M" id="male"> Male 
+  <input type="radio" name="gender" value="F" id="female"> Female 
+  <button type="submit">Insert</button>
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener('submit', function(event) {
+event.preventDefault();  
+  username = document.getElementById("name").value;
+  alert(username);
+ gg = document.querySelector('input[name="gender"]:checked').value;
+  alert(gg);
+});
+</script>
+</body>
+</html>
+--------------
+Image Slider:
+------------
+<html>
+<head>
+<style>
+    .slider-container {
+        position: relative;
+        width: 500px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    
+    #images {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    .button {
+        position: absolute;
+        top: 50%;
+       
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .left {
+        left: 0;
+    }
+
+    .right {
+        right: 0;
+    }
+
+
+    .button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+</style>
+</head>
+<body>
+<h2> Image Slider </h2>
+
+<div class="slider-container">
+    <button class="button left" onclick="backward()"> &#9664; </button>
+    <img src="tux.jpg" id="images" width=500 height=400>
+    <button class="button right" onclick="forward()"> &#9654; </button>
+</div>
+
+<script>
+let photos = ["1.jpeg", "2.jpeg", "3.jpeg"];
+let slide = document.getElementById("images");
+let count = 0;
+slide.src = photos[count];
+
+function forward() {
+    count = (count + 1) % photos.length; 
+    slide.src = photos[count];
+}
+
+function backward() {
+    count = (count - 1 + photos.length) % photos.length; 
+    slide.src = photos[count];
+}
+</script>
+
+</body>
+</html>
+
+-----------------------
+
+TODO List: 
+<html>
+<head>
+<style>
+.todo-item-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px; 
+        }
+</style>
+</head>
+<body>
+<div id="todo_list"> </div>
+<input type=text id="item" placeholder="Enter TODO List"> 
+
+<script>
+document.getElementById("item").addEventListener("keydown", 
+function(event)
+{
+if(event.key=="Enter")
+{
+const todo = document.getElementById("item").value;
+const para = document.createElement("p");
+para.textContent = todo; 
+
+//document.getElementById("todo_list").appendChild(para); 
+const button = document.createElement("span"); 
+button.textContent = 'X';
+button.style.color = "red";
+button.style.cursor = 'pointer';
+
+ button.addEventListener('click', function() {
+            this.parentElement.remove();
+        });
+
+const todo_item_container = document.createElement("div");
+//document.getElementById("todo_list").appendChild(button);
+ todo_item_container.className = "todo-item-container"; 
+todo_item_container.appendChild(para);
+todo_item_container.appendChild(button);
+document.getElementById("todo_list").appendChild(todo_item_container);
+document.getElementById("item").value ="";
+
+}
+}
+
+);
+</script>
+</body>
+</html>
+
+Profile: 
+-------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay's </title>
+    <link rel="stylesheet" href="style.css">
+<style>
+.name
+{
+font-family: 'Arial', sans-serif;
+color:white;
+}
+.navbar
+{
+display:flex; 
+justify-content:space-between;
+font-family: 'Arial', sans-serif;
+    background-color: #333;
+    padding: 20px;
+ 
+}
+a{
+text-decoration:None;
+color:white;
+}
+a:hover
+{
+color:orange;
+}
+
+.content-section
+{
+    margin-top: 20px; 
+font-family: 'Arial', sans-serif;
+    background-color: #999 ;
+    padding: 20px;
+border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+</style>
+<script>
+function showContent(sectionId) {
+    // Hide all sections
+    var sections = document.getElementsByClassName('content-section');
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = 'none';
+    }
+    
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="name">Ajay B.E.</div>
+        <div class="menu">
+            <a href="#" onclick="showContent('education')">Education</a>
+            <a href="#" onclick="showContent('projects')">Projects</a>
+            <a href="#" onclick="showContent('courses')">Courses</a>
+            <a href="#" onclick="showContent('contact')">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <div class="content">
+        <div id="education" class="content-section" style="display:none;">
+            <h2>Education</h2>
+            <p>This is the education section.</p>
+        </div>
+        <div id="projects" class="content-section" style="display:none;">
+            <h2>Projects</h2>
+            <p>This is the projects section.</p>
+        </div>
+        <div id="courses" class="content-section" style="display:none;">
+            <h2>Courses</h2>
+            <p>This is the courses section.</p>
+        </div>
+        <div id="contact" class="content-section" style="display:none;">
+            <h2>Contact</h2>
+            <p>This is the contact section.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
