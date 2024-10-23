@@ -99,53 +99,63 @@ TODO List:
 <html>
 <head>
 <style>
-.todo-item-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px; 
-        }
+.in-div
+{
+display:flex; 
+justify-content: space-between; 
+margin-right: 20px; 
+}
 </style>
 </head>
 <body>
-<div id="todo_list"> </div>
-<input type=text id="item" placeholder="Enter TODO List"> 
-
+<h2> TO DO LIST </h2>
+<input type="text" id="todo_item" placeholder="Enter action to do">
+<div id="todolist"> 
+</div>
 <script>
-document.getElementById("item").addEventListener("keydown", 
+document.getElementById("todo_item").addEventListener("keydown", 
 function(event)
 {
 if(event.key=="Enter")
 {
-const todo = document.getElementById("item").value;
-const para = document.createElement("p");
-para.textContent = todo; 
+ todo_action =  document.getElementById("todo_item").value;
+  para =   document.createElement("p");
+            
 
-//document.getElementById("todo_list").appendChild(para); 
-const button = document.createElement("span"); 
-button.textContent = 'X';
-button.style.color = "red";
-button.style.cursor = 'pointer';
 
- button.addEventListener('click', function() {
-            this.parentElement.remove();
-        });
+//para.innerHTML = todo_action; 
+para.textContent = todo_action; //<p> Washing Clothes </p>
+//alert(todo_action);
 
-const todo_item_container = document.createElement("div");
-//document.getElementById("todo_list").appendChild(button);
- todo_item_container.className = "todo-item-container"; 
-todo_item_container.appendChild(para);
-todo_item_container.appendChild(button);
-document.getElementById("todo_list").appendChild(todo_item_container);
-document.getElementById("item").value ="";
+
+//Placing inside division: 
+list = document.getElementById("todolist");
+inner_division =  document.createElement("div");
+inner_division.className = 'in-div';
+inner_division.appendChild(para);
+document.getElementById("todo_item").value = "";
+
+//Creating Remove Button: X
+remove_button = document.createElement("span");
+remove_button.textContent = 'X';
+remove_button.style.color = 'red';
+//Placing Remove Button: X inside division
+inner_division.appendChild(remove_button);
+//Adding inner division to existing division
+list.appendChild(inner_division)
+//To remove action item: 
+remove_button.addEventListener('click', function()
+{
+this.parentElement.remove(); 
+});
 
 }
-}
+});
 
-);
 </script>
 </body>
-</html>
 
+</html>
 Profile: 
 -------
 
