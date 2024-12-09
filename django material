@@ -474,8 +474,8 @@ ADDING CSS FILES and IMAGES:
 settings.py:
 -----------
 
-STATIC_DIR = os.path.join(BASE_DIR2, 'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR2, 'static')]
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 Make sure images are shown properly. 
 
@@ -491,20 +491,11 @@ ADDING CSS FILE:
 1) Create a folder 'css' inside static 
 2) Place style.css file in newly created 'css' folder. 
 3) Cut <style> tag content from HTML File and paste it here. 
-body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: {{ bg_color }};
-            color: #fff;
-        }
-        h1 {
-            font-size: 3em;
-        }
+body
+{
+font-family: Arial, sans-serif;
+color: red;
+}
 4) Add 
 <link rel="stylesheet" href="{%static "css/style.css" %}"> to your html file. 
 
