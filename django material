@@ -1048,14 +1048,16 @@ from formApp.forms import MovieInfoForm
 def home_page_view(request):
     return render(request, 'firstApp/index.html')
 
-def add_movie_view(request):
-    form = MovieInfoForm()
+def add_movie(request):
+    i_form = MovieForm()
     if request.method == 'POST':
-        form = MovieInfoForm(request.POST)
-        if form.is_valid():
-            form.save()
-        return home_page_view
-    return render(request,'firstApp/add_movie.html',{'form':form})
+        i_form = MovieForm(request.POST)   
+        if i_form.is_valid():
+            print("Correct Date")
+            i_form.save()
+        else:
+            print("Check Date")
+    return render(request, 'formApp/add_movie.html',{'form':i_form})
 
 def list_movie_view(request):
     movies_list = Movie.objects.all()
