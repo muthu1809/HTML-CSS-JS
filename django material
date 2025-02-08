@@ -1011,6 +1011,12 @@ class Movie(models.Model):
     director_name = models.CharField(max_length=100)
     imdb_rating = models.IntegerField()
 
+11.1) python3 manage.py makemigrations formApp
+11.2) python3 manage.py migrate
+11.3) admin.py:
+    from formApp.models import Movie
+    admin.site.register(Movie)
+
 12) Create forms.py (in the same folder, where we have models.py)
 
 forms.py:
