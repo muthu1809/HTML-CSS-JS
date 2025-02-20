@@ -10,6 +10,27 @@ Radio Buttons:
 <input type="radio" id="dotnet" name='front_end'> 
 <label for="dotnet"> .NET </label>
 
+Checkbox: 
+<input type="checkbox" name="b"> Bike <br>
+<input type="checkbox" name="c"> Car <br>
+<input type="checkbox" name="bi"> Bicycle <br>
+
+Date: 
+Date Of Birth: <input type="date">
+Time: 
+Time Of Birth: <input type="time">
+
+Date and Time: <input type="datetime-local">
+
+Browse File: 
+<input type="file">
+
+URL: 
+<form action="ab" method="post">
+<input type="url">
+
+</form>
+
 Drop Down / Select Box: 
 
 <select>
@@ -86,6 +107,8 @@ Datalist: for Recommended Options:
 
 input type="range"
 ------------------
+<input type="range" min="0" max="100" step="1" value="50">
+
 <input type="range" list="percentage">
 <datalist id="percentage">
  <option value="5">
