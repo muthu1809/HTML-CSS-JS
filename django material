@@ -1420,6 +1420,77 @@ urls.py:
 path('update/<id>',views.update_view)
 ---------------
 
+-------------------------------------------------------------
+Create Postgres User in Linux Mint: 
+
+
+
+Step 1: 
+Open your terminal and log in to PostgreSQL User:
+sudo -i -u postgres
+
+Step 2: Postgres Shell
+Access the Postgres Shell. 
+psql
+
+Step 3: Create New User
+CREATE USER your_username WITH PASSWORD 'your_password';
+
+Step 4: Grant Privileges
+ * Allow the user to create databases:
+ALTER USER your_username CREATEDB;
+
+ * Give full privileges on a specific database:
+GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_username;
+
+* Make the user a superuser. It gives full access to this user. 
+ALTER USER your_username WITH SUPERUSER;
+
+Step 5: 
+Make sure this user is added. 
+\du
+
+Step 6: 
+Exit from Postgres and try logging in with your new user:
+psql -U your_username -d your_database_name -h localhost -W
+
+Step 7: 
+To communicate with PostgreSQL, psycopg2 package is necessary. Install it as below. 
+
+pip3 install psycopg2-binary
+
+Step 8:
+Now, you can update the DATABASES configuration in settings.py file. 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'your_database_name',
+        'USER': 'your_database_user',
+        'PASSWORD': 'your_database_password',
+        'HOST': 'localhost',  
+        'PORT': '5432',      
+    }
+}
+
+Step 9: 
+Now, move to your project in terminal  and create necessary tables in Postgres. 
+
+python3 manage.py migrate
+
+Step 10: 
+Now, it is optional to create Super User. 
+python3 manage.py createsuperuser
+
+Step 11: 
+Start Django Development Server. 
+python3 manage.py runserver
+
+Step 12: 
+To check if Django is connected to PostgreSQL, you can use:
+
+python manage.py dbshell
+
 
 
 
